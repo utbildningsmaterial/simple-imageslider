@@ -13,7 +13,7 @@ for(let i=0; i<numOfImages; i++){
     document.querySelector('.pager').appendChild(el);
 
 }
-
+updatePager();
 
 
 let animate = () => {
@@ -79,24 +79,3 @@ document.querySelector('#next').addEventListener('click', () => {
     }
 })
 
-document.querySelector('article').addEventListener('click', () => {
-
-    let loop = setInterval(() => {
-        
-        if(activeSlide < numOfImages-1) { 
-        
-            activeSlide++
-    
-            // Animera
-            animate();
-    
-        } else {
-            activeSlide = 0;
-            animate();
-        }
-
-    }, 3000)
-
-})
-
-updatePager();
